@@ -13,7 +13,7 @@
   <title>@yield('titulo', 'Módulo Arbitral')</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-cover bg-center min-h-screen" style="background-image: url('{{ asset('img/jw.jpg') }}')">
+<body class="bg-cover bg-center min-h-screen" {{--style="background-image: url('{{ asset('img/jw.jpg') }}')"--}}>
   <div class="bg-black bg-opacity-60 min-h-screen p-6">
     @yield('contenido')
   </div>

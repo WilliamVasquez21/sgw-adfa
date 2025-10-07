@@ -26,7 +26,7 @@
       <a href="{{ route('analiticas') }}">
         <img src="{{ asset('img/2.png') }}" alt="Analíticas" class="w-10 hover:scale-110 transition-transform duration-150" />
       </a>
-      <a href="{{ route('jugadores') }}">
+      <a href=" ">
         <img src="{{ asset('img/3.png') }}" alt="Jugadores" class="w-10 hover:scale-110 transition-transform duration-150" />
       </a>
       <a href="{{ route('equipos') }}">

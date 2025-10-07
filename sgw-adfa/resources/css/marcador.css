@@ -1,0 +1,34 @@
+/* CONTENEDOR PRINCIPAL DE LA PÁGINA */
+.contenedor-principal-pagina {
+  width: 60%;
+  max-width: 100x; 
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Scrollbar personalizado para Tailwind */
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #004aad;
+    border-radius: 10px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #003e95;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #004aad transparent;
+  }
+}

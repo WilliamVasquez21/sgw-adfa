@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\JugadorController;
+use App\Http\Controllers\MarcadorControlador;
+use App\Http\Controllers\NotificacionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReporteArbitralController;
 
@@ -26,9 +29,9 @@ Route::get('/analiticas', function () {
     return view('errores.no_disponible');
 })->name('analiticas');
 
-Route::get('/jugadores', function () {
-    return view('errores.no_disponible');
-})->name('jugadores');
+//Route::get('/jugadores', function () {
+  //  return view('errores.no_disponible');
+//})->name('jugadores');
 
 Route::get('/equipos', function () {
     return view('errores.no_disponible');
@@ -54,3 +57,25 @@ Route::get('/superusuario', function () {
 Route::fallback(function () {
     return view('errores.no_disponible');
 });
+
+
+
+
+Route::get('/', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+//login
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+//gestion de jugadores
+Route::get('/jugadores', [JugadorController::class, 'index'])->name('jugadores.index');
+//nuevo jugador
+Route::get('/jugadores/jugador', [JugadorController::class, 'create'])->name('jugadores.create');
+//perfil jugador
+Route::get('/perfiljugador', [JugadorController::class, 'perfilJugador'])->name('jugadores.perfiljugador');
+//tablas de puntuaciones
+Route::get('/tabla', [MarcadorControlador::class, 'tablas'])->name('marcador.tablas');
+//notificaciones
+Route::get('/notificacion', [NotificacionController::class, 'index'])->name('notificaciones.index');
